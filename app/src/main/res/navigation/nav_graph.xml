@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AFragment">
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.myth.research.navigationresearch.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" />
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.myth.research.navigationresearch.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" />
+</navigation>
