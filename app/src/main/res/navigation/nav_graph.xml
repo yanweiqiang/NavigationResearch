@@ -14,4 +14,6 @@
         android:name="com.myth.research.navigationresearch.BFragment"
         android:label="fragment_b"
         tools:layout="@layout/fragment_b" />
+
+    <include app:graph="@navigation/nav_graph_b" />
 </navigation>

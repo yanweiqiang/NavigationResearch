@@ -1,14 +1,10 @@
 package com.myth.research.navigationresearch
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavGraph
-import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_a.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [AFragment.newInstance] factory method to
+ * Use the [NavGraphBFirstFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class AFragment : Fragment() {
+class NavGraphBFirstFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -37,19 +33,8 @@ class AFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("navigation", "A.onCreateView")
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        btn_a.setOnClickListener {
-            Log.d("graphDetail", findNavController().graph.toString())
-            val navGraph = findNavController().graph.findNode(R.id.nav_graph_b) as NavGraph
-            navGraph.startDestination = R.id.navGraphBFirstFragment
-            findNavController().navigate(R.id.nav_graph_b)
-        }
+        return inflater.inflate(R.layout.fragment_nav_graph_b_first, container, false)
     }
 
     companion object {
@@ -59,12 +44,12 @@ class AFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment AFragment.
+         * @return A new instance of fragment NavGraphBFirstFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            AFragment().apply {
+            NavGraphBFirstFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
